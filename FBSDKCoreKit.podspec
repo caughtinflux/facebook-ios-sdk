@@ -57,5 +57,5 @@ Pod::Spec.new do |s|
   s.requires_arc = ['FBSDKCoreKit/FBSDKCoreKit/*',
                     'FBSDKCoreKit/FBSDKCoreKit/Internal/**/*']
 
-  s.ios.dependency 'Bolts', :git => "https://github.com/caughtinflux/Bolts-ObjC.git"
+  s.ios.dependency 'Bolts', :git => 'https://github.com/caughtinflux/Bolts-ObjC.git'
 end
