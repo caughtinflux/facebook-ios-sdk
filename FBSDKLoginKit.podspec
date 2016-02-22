@@ -20,8 +20,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = "7.0"
 
-  s.source       = { :git => "https://github.com/caughtinflux/facebook-ios-sdk.git"
-                    }
+  s.source       = { :git => "https://github.com/caughtinflux/facebook-ios-sdk.git" }
 
   s.weak_frameworks = "Accounts", "CoreLocation", "Social", "Security", "QuartzCore", "CoreGraphics", "UIKit", "Foundation", "AudioToolbox"
 
