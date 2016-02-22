@@ -114,6 +114,8 @@
       }
       return NO;
     case FBSDKGraphRequestErrorCategoryOther :
+      NSLog(@"FBSDKGraphRequestErrorCategoryOther errors are not handled in the hacked SDK!");
+      /*
       if ([request.tokenString isEqualToString:[FBSDKAccessToken currentAccessToken].tokenString]) {
         NSString *message = error.userInfo[FBSDKErrorLocalizedDescriptionKey];
         NSString *title = error.userInfo[FBSDKErrorLocalizedTitleKey];
@@ -134,6 +136,7 @@
           });
         }
       }
+      */
       return NO;
   }
   return NO;
