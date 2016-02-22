@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   s.header_mappings_dir = "FBSDKCoreKit/FBSDKCoreKit"
 
   s.public_header_files = 'FBSDKCoreKit/FBSDKCoreKit/*.h'
+  s.prefix_header_file = 'FBSDKCoreKit/FBSDKCoreKit/FBSDKPrefix.pch'
   s.source_files = 'FBSDKCoreKit/FBSDKCoreKit/**/*.{h,m}'
   s.tvos.exclude_files = 'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkResolver.{h,m}',
                           'FBSDKCoreKit/FBSDKCoreKit/FBSDKAppLinkUtility.{h,m}',
