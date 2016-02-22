@@ -64,6 +64,8 @@
         // Set up a block to do the typical recovery work so that we can chain it for ios auth special cases.
         // the block returns YES if recovery UI is started (meaning we wait for the alertviewdelegate to resume control flow).
         BOOL (^standardRecoveryWork)(void) = ^BOOL{
+          NSLog(@"Recovery work is disabled in the hacked SDK! :( Migrate this to UIAlertController or GTFO");
+          /*
           NSArray *recoveryOptionsTitles = error.userInfo[NSLocalizedRecoveryOptionsErrorKey];
           if (recoveryOptionsTitles.count > 0 && _recoveryAttempter) {
             NSString *recoverySuggestion = error.userInfo[NSLocalizedRecoverySuggestionErrorKey];
@@ -84,6 +86,7 @@
             });
             return YES;
           }
+           */
           return NO;
         };
 
