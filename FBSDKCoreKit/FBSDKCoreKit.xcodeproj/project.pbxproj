@@ -308,6 +308,7 @@
 		9DF2A4001A70572B00DFB2FD /* FBSDKGraphRequestMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF2A3FE1A70572B00DFB2FD /* FBSDKGraphRequestMetadata.m */; };
 		ADEA17731B7ECA1A0070EDC0 /* FBSDKMonotonicTime.h in Headers */ = {isa = PBXBuildFile; fileRef = ADEA17711B7ECA1A0070EDC0 /* FBSDKMonotonicTime.h */; };
 		ADEA17741B7ECA1A0070EDC0 /* FBSDKMonotonicTime.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEA17721B7ECA1A0070EDC0 /* FBSDKMonotonicTime.m */; };
+		BFB5D0D41C7AA29000AB0F15 /* FBSDKCoreKitUIApplicationAccess.h in Headers */ = {isa = PBXBuildFile; fileRef = BFB5D0D31C7AA25100AB0F15 /* FBSDKCoreKitUIApplicationAccess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -712,7 +713,7 @@
 		9DF2A3FE1A70572B00DFB2FD /* FBSDKGraphRequestMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSDKGraphRequestMetadata.m; sourceTree = "<group>"; };
 		ADEA17711B7ECA1A0070EDC0 /* FBSDKMonotonicTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSDKMonotonicTime.h; sourceTree = "<group>"; };
 		ADEA17721B7ECA1A0070EDC0 /* FBSDKMonotonicTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSDKMonotonicTime.m; sourceTree = "<group>"; };
-		BFB5D08B1C7A707400AB0F15 /* FBSDKPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSDKPrefix.pch; sourceTree = "<group>"; };
+		BFB5D0D31C7AA25100AB0F15 /* FBSDKCoreKitUIApplicationAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSDKCoreKitUIApplicationAccess.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1088,6 +1089,7 @@
 		9D2697491A5DF40700143BFC /* FBSDKCoreKit */ = {
 			isa = PBXGroup;
 			children = (
+				BFB5D0D31C7AA25100AB0F15 /* FBSDKCoreKitUIApplicationAccess.h */,
 				9D3029081A65C4420086B9ED /* FBSDKAccessToken.h */,
 				9D3029091A65C4420086B9ED /* FBSDKAccessToken.m */,
 				9D0BC1551A8D23E200BE8BA4 /* FBSDKAppEvents.h */,
@@ -1135,7 +1137,6 @@
 			isa = PBXGroup;
 			children = (
 				9D26974B1A5DF40700143BFC /* Info.plist */,
-				BFB5D08B1C7A707400AB0F15 /* FBSDKPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1278,6 +1279,7 @@
 				890414881A64893100617215 /* FBSDKCopying.h in Headers */,
 				89688B621AA64C5E00A98519 /* FBSDKViewImpressionTracker.h in Headers */,
 				9D6999FE1A76E166003AE384 /* FBSDKLogger.h in Headers */,
+				BFB5D0D41C7AA29000AB0F15 /* FBSDKCoreKitUIApplicationAccess.h in Headers */,
 				894C0B611A7150AC009137EF /* FBSDKError.h in Headers */,
 				89830F2B1A7805D100226ABB /* FBSDKServerConfigurationManager.h in Headers */,
 				9DF2A3FF1A70572B00DFB2FD /* FBSDKGraphRequestMetadata.h in Headers */,
@@ -1930,7 +1932,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697651A5DF43700143BFC /* FacebookSDK-Library.xcconfig */;
 			buildSettings = {
-				GCC_PREFIX_HEADER = FBSDKCoreKit/FBSDKPrefix.pch;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
@@ -1939,7 +1941,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697651A5DF43700143BFC /* FacebookSDK-Library.xcconfig */;
 			buildSettings = {
-				GCC_PREFIX_HEADER = FBSDKCoreKit/FBSDKPrefix.pch;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;

@@ -22,6 +22,7 @@
 #import "FBSDKError.h"
 #import "FBSDKTypeUtility.h"
 #import "FBSDKUtility.h"
+#import "FBSDKCoreKitUIApplicationAccess.h"
 
 #define FBSDK_WEB_DIALOG_VIEW_BORDER_WIDTH 10.0
 

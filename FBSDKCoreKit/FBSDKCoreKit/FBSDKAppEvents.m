@@ -36,6 +36,7 @@
 #import "FBSDKSettings.h"
 #import "FBSDKTimeSpentData.h"
 #import "FBSDKUtility.h"
+#import "FBSDKCoreKitUIApplicationAccess.h"
 
 //
 // Public event names

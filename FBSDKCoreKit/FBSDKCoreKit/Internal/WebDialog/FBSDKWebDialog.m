@@ -24,6 +24,7 @@
 #import "FBSDKSettings.h"
 #import "FBSDKTypeUtility.h"
 #import "FBSDKWebDialogView.h"
+#import "FBSDKCoreKitUIApplicationAccess.h"
 
 #define FBSDK_WEB_DIALOG_SHOW_ANIMATION_DURATION 0.2
 #define FBSDK_WEB_DIALOG_DISMISS_ANIMATION_DURATION 0.3
