@@ -175,6 +175,8 @@
 {
   [self logTapEventWithEventName:FBSDKAppEventNameFBSDKLoginButtonDidTap parameters:[self analyticsParameters]];
   if ([FBSDKAccessToken currentAccessToken]) {
+    NSLog(@"FBSDKLoginButton will not work in this hacked version of the SDK!");
+    /*
     NSString *title = nil;
 
     if (_userName) {
@@ -206,6 +208,7 @@
                                          destructiveButtonTitle:logOutTitle
                                               otherButtonTitles:nil];
     [sheet showInView:self];
+    */
 #pragma clang diagnostic pop
   } else {
     if ([self.delegate respondsToSelector:@selector(loginButtonWillLogin:)]) {
