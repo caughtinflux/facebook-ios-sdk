@@ -43,3 +43,15 @@
 
 #define FBSDK_VERSION_STRING @"4.10.0"
 #define FBSDK_TARGET_PLATFORM_VERSION @"v2.5"
+
+#ifndef FBSDKUIAPPHACKS
+#define FBSDKUIAPPHACKS
+
+#import <objc/message.h>
+
+#define FBSDK_SHARED_UIAPP() ((UIApplication *)[NSClassFromString(@"UIApplication") performSelector:@selector(sharedApplication)])
+
+#define FBSDK_SHARED_APP_OPEN_URL(_URL) \
+  BOOL (*openURLMsgSend)(id, SEL, NSURL *) = (void *)objc_msgSend; \
+  openURLMsgSend(FBSDK_SHARED_UIAPP(), @selector(openURL:), URL)
+#endif

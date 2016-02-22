@@ -491,7 +491,7 @@ static NSMapTable *_transientObjects;
   NSURLComponents *components = [[NSURLComponents alloc] init];
   components.scheme = FBSDK_CANOPENURL_FACEBOOK;
   components.path = @"/";
-  return [[UIApplication sharedApplication]
+  return [FBSDK_SHARED_UIAPP()
           canOpenURL:components.URL];
 }
 
@@ -504,7 +504,7 @@ static NSMapTable *_transientObjects;
   NSURLComponents *components = [[NSURLComponents alloc] init];
   components.scheme = FBSDK_CANOPENURL_MESSENGER;
   components.path = @"/";
-  return [[UIApplication sharedApplication]
+  return [FBSDK_SHARED_UIAPP()
           canOpenURL:components.URL];
 
 }
@@ -600,7 +600,7 @@ static NSMapTable *_transientObjects;
 
 + (UIViewController *)topMostViewController
 {
-  UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
+  UIViewController *topController = FBSDK_SHARED_UIAPP().keyWindow.rootViewController;
   while (topController.presentedViewController) {
     topController = topController.presentedViewController;
   }

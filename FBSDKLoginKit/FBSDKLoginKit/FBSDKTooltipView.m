@@ -474,7 +474,7 @@ static CGMutablePathRef _createCloseCrossGlyphWithRect(CGRect rect)
 {
   // Compute the positioning of the arrow.
   CGRect screenBounds = [[UIScreen mainScreen] bounds];
-  UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+  UIInterfaceOrientation orientation = FBSDK_SHARED_UIAPP().statusBarOrientation;
   if (!UIInterfaceOrientationIsPortrait(orientation)) {
     screenBounds = CGRectMake(0, 0, screenBounds.size.height, screenBounds.size.width);
   }

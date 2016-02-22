@@ -333,7 +333,7 @@
   NSURLComponents *components = [[NSURLComponents alloc] init];
   components.scheme = [scheme stringByAppendingString:minimumVersion];
   components.path = @"/";
-  return ([[UIApplication sharedApplication] canOpenURL:components.URL] ||
+  return ([FBSDK_SHARED_UIAPP() canOpenURL:components.URL] ||
           [self _canUseFBShareSheet]);
 }
 
@@ -346,7 +346,7 @@
   NSURLComponents *components = [[NSURLComponents alloc] init];
   components.scheme = FBSDK_SHARE_EXTENSION_APP_SCHEME;
   components.path = @"/";
-  return [[UIApplication sharedApplication] canOpenURL:components.URL];
+  return [FBSDK_SHARED_UIAPP() canOpenURL:components.URL];
 }
 
 - (void)_cleanUpWebDialog

@@ -211,9 +211,9 @@ static FBSDKWebDialog *g_currentDialog = nil;
 
 - (UIWindow *)_findWindow
 {
-  UIWindow *window = [UIApplication sharedApplication].keyWindow;
+  UIWindow *window = FBSDK_SHARED_UIAPP().keyWindow;
   if (window == nil || window.windowLevel != UIWindowLevelNormal) {
-    for (window in [UIApplication sharedApplication].windows) {
+    for (window in FBSDK_SHARED_UIAPP().windows) {
       if (window.windowLevel == UIWindowLevelNormal) {
         break;
       }
@@ -272,7 +272,7 @@ static FBSDKWebDialog *g_currentDialog = nil;
   // iOS 8 simply adjusts the application frame to adapt to the current orientation and deprecated the concept of
   // interface orientations
   if ([FBSDKInternalUtility shouldManuallyAdjustOrientation]) {
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
+    switch (FBSDK_SHARED_UIAPP().statusBarOrientation) {
       case UIInterfaceOrientationLandscapeLeft:
         return CGAffineTransformMakeRotation(M_PI * 1.5);
       case UIInterfaceOrientationLandscapeRight:
@@ -295,7 +295,7 @@ static FBSDKWebDialog *g_currentDialog = nil;
   CGRect applicationFrame = _dialogView.window.screen.applicationFrame;
 #pragma clang diagnostic pop
   if ([FBSDKInternalUtility shouldManuallyAdjustOrientation]) {
-    switch ([UIApplication sharedApplication].statusBarOrientation) {
+    switch (FBSDK_SHARED_UIAPP().statusBarOrientation) {
       case UIInterfaceOrientationLandscapeLeft:
       case UIInterfaceOrientationLandscapeRight:
         return CGRectMake(0, 0, CGRectGetHeight(applicationFrame), CGRectGetWidth(applicationFrame));

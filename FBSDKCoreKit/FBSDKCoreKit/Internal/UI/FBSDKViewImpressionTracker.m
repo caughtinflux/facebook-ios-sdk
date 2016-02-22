@@ -55,7 +55,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(_applicationDidEnterBackgroundNotification:)
                                                  name:UIApplicationDidEnterBackgroundNotification
-                                               object:[UIApplication sharedApplication]];
+                                               object:FBSDK_SHARED_UIAPP()];
   }
   return self;
 }

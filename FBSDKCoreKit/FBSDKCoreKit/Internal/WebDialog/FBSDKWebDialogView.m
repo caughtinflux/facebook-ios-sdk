@@ -172,7 +172,7 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
     }
     return NO;
   } else if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-    [[UIApplication sharedApplication] openURL:request.URL];
+    FBSDK_SHARED_APP_OPEN_URL(request.URL);
     return NO;
   } else {
     return YES;

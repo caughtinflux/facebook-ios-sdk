@@ -218,7 +218,7 @@ static NSString *const FBSDKAppLinkInboundEvent = @"fb_al_inbound";
   _pendingURLOpen = sender;
   dispatch_async(dispatch_get_main_queue(), ^{
     // Dispatch openURL calls to prevent hangs if we're inside the current app delegate's openURL flow already
-    BOOL opened = [[UIApplication sharedApplication] openURL:url];
+    BOOL opened = [FBSDK_SHARED_UIAPP() openURL:url];
 
     if ([url.scheme hasPrefix:@"http"] && !opened) {
       NSOperatingSystemVersion iOS8Version = { .majorVersion = 8, .minorVersion = 0, .patchVersion = 0 };

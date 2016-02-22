@@ -472,6 +472,27 @@
 			remoteGlobalIDString = 095981C219806A7900807DBE;
 			remoteInfo = "OHHTTPStubs Mac Framework";
 		};
+		BFB5D0961C7A707500AB0F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5557191A8D3D7400344F86 /* Bolts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D5D7DD31BE3CE8200FD67C7;
+			remoteInfo = "Bolts-iOS-Dynamic";
+		};
+		BFB5D0981C7A707500AB0F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5557191A8D3D7400344F86 /* Bolts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81E94D6A1C2B8BF200A6291E;
+			remoteInfo = "Bolts-tvOS-Dynamic";
+		};
+		BFB5D09A1C7A707500AB0F15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7E5557191A8D3D7400344F86 /* Bolts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 819573F11C2B8ECB00BFCA39;
+			remoteInfo = "Bolts-watchOS-Dynamic";
+		};
 		DB3A5F011BED707B003919E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7E5557191A8D3D7400344F86 /* Bolts.xcodeproj */;
@@ -691,6 +712,7 @@
 		9DF2A3FE1A70572B00DFB2FD /* FBSDKGraphRequestMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSDKGraphRequestMetadata.m; sourceTree = "<group>"; };
 		ADEA17711B7ECA1A0070EDC0 /* FBSDKMonotonicTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSDKMonotonicTime.h; sourceTree = "<group>"; };
 		ADEA17721B7ECA1A0070EDC0 /* FBSDKMonotonicTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSDKMonotonicTime.m; sourceTree = "<group>"; };
+		BFB5D08B1C7A707400AB0F15 /* FBSDKPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSDKPrefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -732,9 +754,12 @@
 			isa = PBXGroup;
 			children = (
 				9D7BA69F1C10C4F0004A1181 /* Bolts.framework */,
+				BFB5D0971C7A707500AB0F15 /* Bolts.framework */,
 				9D7BA6A11C10C4F0004A1181 /* Bolts.framework */,
 				DB3A5F021BED707B003919E4 /* Bolts.framework */,
+				BFB5D0991C7A707500AB0F15 /* Bolts.framework */,
 				DB3A5F041BED707B003919E4 /* Bolts.framework */,
+				BFB5D09B1C7A707500AB0F15 /* Bolts.framework */,
 				9D9947191A9531B5003375EC /* BoltsTests-iOS.xctest */,
 				9D99471B1A9531B5003375EC /* BoltsTests-OSX.xctest */,
 				DB3A5F061BED707B003919E4 /* BoltsTests-tvOS.xctest */,
@@ -1110,6 +1135,7 @@
 			isa = PBXGroup;
 			children = (
 				9D26974B1A5DF40700143BFC /* Info.plist */,
+				BFB5D08B1C7A707400AB0F15 /* FBSDKPrefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1421,7 +1447,7 @@
 		9D26973E1A5DF40700143BFC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					9D2697461A5DF40700143BFC = {
@@ -1591,6 +1617,27 @@
 			fileType = wrapper.framework;
 			path = OHHTTPStubs.framework;
 			remoteRef = ADEA17811B7ECA1A0070EDC0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFB5D0971C7A707500AB0F15 /* Bolts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bolts.framework;
+			remoteRef = BFB5D0961C7A707500AB0F15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFB5D0991C7A707500AB0F15 /* Bolts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bolts.framework;
+			remoteRef = BFB5D0981C7A707500AB0F15 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFB5D09B1C7A707500AB0F15 /* Bolts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bolts.framework;
+			remoteRef = BFB5D09A1C7A707500AB0F15 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		DB3A5F021BED707B003919E4 /* Bolts.framework */ = {
@@ -1867,6 +1914,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697671A5DF43700143BFC /* FacebookSDK-Project-Debug.xcconfig */;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -1881,6 +1930,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697651A5DF43700143BFC /* FacebookSDK-Library.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = FBSDKCoreKit/FBSDKPrefix.pch;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
@@ -1888,6 +1939,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697651A5DF43700143BFC /* FacebookSDK-Library.xcconfig */;
 			buildSettings = {
+				GCC_PREFIX_HEADER = FBSDKCoreKit/FBSDKPrefix.pch;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
@@ -1895,6 +1948,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697661A5DF43700143BFC /* FacebookSDK-LogicTests.xcconfig */;
 			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
@@ -1902,6 +1956,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D2697661A5DF43700143BFC /* FacebookSDK-LogicTests.xcconfig */;
 			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
@@ -1937,6 +1992,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DB0FA7B1BC1CB19005EB8B1 /* FacebookSDK-Project-TVOS-Debug.xcconfig */;
 			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Debug;
 		};
@@ -1944,6 +2000,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9DB0FA7C1BC1CB19005EB8B1 /* FacebookSDK-Project-TVOS-Release.xcconfig */;
 			buildSettings = {
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.sdk.$(PRODUCT_NAME:rfc1034identifier)";
 			};
 			name = Release;
 		};
